@@ -9,7 +9,6 @@ Save, organize, and equip your favorite armor sets through an intuitive inventor
 </p>
 
 ---
-
 ## Overview
 
 RayzWardrobe is a Minecraft server plugin that allows players to store and manage multiple armor outfits without repeatedly assembling them from their inventory.
