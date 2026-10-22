@@ -1,0 +1,14 @@
+theme-name: "Pastel"
+slot: 15
+permission: ""
+# PLAYER HEAD AS ICON:
+# icon: PLAYER_HEAD
+#  head-owner: "%player_name%"   # or a specific name like "Notch"
+# minecraft-heads.com
+#  head-texture: "eeauhdwaushdwasd...." # optional custom texture
+icon: PINK_DYE
+background: WHITE_STAINED_GLASS_PANE
+primary-color: PINK_STAINED_GLASS_PANE
+secondary-color: LIGHT_BLUE_STAINED_GLASS_PANE
+empty-slot-icon: LIME_STAINED_GLASS_PANE
+locked-icon: BARRIER

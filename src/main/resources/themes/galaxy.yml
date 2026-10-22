@@ -1,0 +1,14 @@
+theme-name: "Galaxy"
+slot: 13
+permission: ""
+# PLAYER HEAD AS ICON:
+# icon: PLAYER_HEAD
+#  head-owner: "%player_name%"   # or a specific name like "Notch"
+# minecraft-heads.com
+#  head-texture: "eeauhdwaushdwasd...." # optional custom texture
+icon: NETHER_STAR
+background: PURPLE_STAINED_GLASS_PANE
+primary-color: BLUE_STAINED_GLASS_PANE
+secondary-color: MAGENTA_STAINED_GLASS_PANE
+empty-slot-icon: BLACK_STAINED_GLASS_PANE
+locked-icon: OBSIDIAN

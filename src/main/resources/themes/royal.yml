@@ -1,0 +1,14 @@
+theme-name: "Royal"
+slot: 22
+permission: ""
+# PLAYER HEAD AS ICON:
+# icon: PLAYER_HEAD
+#  head-owner: "%player_name%"   # or a specific name like "Notch"
+# minecraft-heads.com
+#  head-texture: "eeauhdwaushdwasd...." # optional custom texture
+icon: GOLDEN_HELMET
+background: PURPLE_STAINED_GLASS_PANE
+primary-color: GOLD_BLOCK
+secondary-color: YELLOW_STAINED_GLASS_PANE
+empty-slot-icon: ORANGE_STAINED_GLASS_PANE
+locked-icon: BARRIER

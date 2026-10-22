@@ -1,0 +1,87 @@
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                       RAYZ WARDROBE MESSAGES                        ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+# Supports legacy color codes (&a, &b, &c, etc.)
+
+gui:
+  title: "&8» &3&lRayz&b&lWardrobe &8| &7Page {page}/{total}"
+  admin-title: "&8» &c&lAdmin &8| &b{player}'s Wardrobe &8(&7{page}/{total}&8)"
+
+  buttons:
+    previous: "&8« &aPrevious Page"
+    next: "&aNext Page &8»"
+    no-previous: "&8« &cNo Previous Page"
+    no-next: "&cNo Next Page &8»"
+    page-info: "&7Current Page: &b{page} &8/ &7{total}"
+    themes: "&dThemes &8| &7Selected: &f{theme}"
+
+    empty-slot: "&8[&7 Empty Armour Slot &8]"
+    locked-slot: "&8[&c Locked Slot &8]"
+
+    equip: "&8» &a&lEQUIP &8| &f{name}"
+    save: "&8» &e&lSAVE &8| &fCurrent Armour"
+
+    save-tools: "&8>> &e&lSAVE &8| &fCurrent Armour + Tools"
+    empty-armor-slot: "&c&oEmpty Slot"
+    empty-placeholder: "&8&o(Empty)"
+    empty-tool-slot: "&8&o(Empty Tool {number})"
+    locked-armor: "&c&l🔒 LOCKED"
+    locked-action: "&c&oRequires Permission"
+    back-to-wardrobe: "&8« &aReturn to Wardrobe"
+    view-set: "&8» &b&lINSPECT &8| &f{name}"
+    empty-action: "&8[&7 Empty &8]"
+
+  lore:
+    page-info:
+      - "&8Wardrobe navigation"
+      - "&7Page &f{page}&7 of &f{total}"
+    themes:
+      - "&7Change the look of your wardrobe."
+    nameplate:
+      - "&7Right-click to rename."
+    empty-slot:
+      - "&7Click the save button below to store this outfit."
+    locked-slot:
+      - "&cYou do not have access to slot {slot}."
+    equip:
+      - "&7Click to swap into this wardrobe set."
+      - "&8Your current armour/tools are stored back here."
+    save:
+      - "&7Click to store your worn armour."
+    save-tools:
+      - "&7Click to store your worn armour."
+      - "&7Main hand and off hand can store tools."
+    locked-action:
+      - "&cMissing slot permission."
+
+themes_gui:
+  title: "&8» &d&lTheme Selector"
+  back-button: "&8« &cReturn"
+  theme-selected: "&a&l✔ &7Currently Active"
+  theme-apply: "&8» &eClick to apply theme"
+  locked-theme: "&c&l🔒 &cLocked Theme"
+  locked-permission: "&8» &7Requires: &f{permission}"
+
+messages:
+  saved-tools: "&8[&bWardrobe&8] &e+ &fArmour and tools saved as &e{name}&f!"
+  no-tools-captured: "&8[&e!&8] &eNo eligible tools were saved. Hold configured tools in your main hand and off hand."
+  loaded: "&8[&bWardrobe&8] &a✦ &fSuccessfully equipped &b{name}&f!"
+  saved: "&8[&bWardrobe&8] &e✔ &fArmour saved as &e{name}&f!"
+  rename-prompt: "&8[&bWardrobe&8] &e✎ &fPlease type the new name in chat:"
+  rename-cancel: "&8[&bWardrobe&8] &7Type &c'cancel' &7in chat to abort renaming."
+  rename-cancelled: "&8[&bWardrobe&8] &c✖ &fRenaming process cancelled."
+  renamed: "&8[&bWardrobe&8] &a✎ &fWardrobe renamed to &b{new}&f!"
+  reload: "&a[RayzWardrobe] &fConfiguration, GUI, messages & themes reloaded successfully!"
+
+errors:
+  only-players: "&8[&c!&8] &cOnly players can interact with the Wardrobe!"
+  no-permission: "&8[&c!&8] &cYou lack the &4{permission} &cpermission!"
+  no-page-permission: "&8[&c!&8] &cYou cannot access page &4{page}&c!"
+  no-slot-permission: "&8[&c!&8] &cYou do not have access to this slot!"
+  cooldown: "&8[&e!&8] &ePlease wait &6{time}s &ebefore doing that again."
+  no-armor: "&8[&c!&8] &cYou aren't wearing any armour to save!"
+  blocked-tool-slot: "&8[&c!&8] &cMove unsupported items out of your &4{slots}&c first."
+  max-sets: "&8[&c!&8] &cMaximum armour sets reached &8(&4{max}&8)&c!"
+  full-inventory: "&8[&c!&8] &cYour inventory is too full!"
+  name-too-long: "&8[&c!&8] &cName is too long! &8(&cMax {max} chars&8)"
+  name-too-short: "&8[&c!&8] &cName is too short! &8(&cMin {min} chars&8)"

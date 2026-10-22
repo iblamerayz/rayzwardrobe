@@ -1,0 +1,219 @@
+name: RayzWardrobe
+version: '${version}'
+main: org.rayz.rayzWardrobe.RayzWardrobe
+api-version: '1.21'
+softdepend: [PlaceholderAPI, ItemsAdder, Oraxen, Nexo, MMOItems, MythicMobs, MythicCrucible, EcoItems, ExecutableItems]
+
+commands:
+  wardrobe:
+    description: Main wardrobe command with subcommands
+    usage: /wardrobe [help|credits|themes|view|reload]
+    aliases: [wd, rw]
+  rwreload:
+    description: Reload the RayzWardrobe configuration
+    usage: /rwreload
+    permission: rayzwardrobe.reload
+
+permissions:
+  rayzwardrobe.use:
+    description: Allows opening your own wardrobe
+    default: true
+  rayzwardrobe.themes:
+    description: Allows opening the theme selector
+    default: true
+  rayzwardrobe.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  rayzwardrobe.admin.view:
+    description: Allows viewing another online player's wardrobe
+    default: op
+  rayzwardrobe.admin:
+    description: Grants all RayzWardrobe administration permissions
+    default: op
+    children:
+      rayzwardrobe.use: true
+      rayzwardrobe.themes: true
+      rayzwardrobe.reload: true
+      rayzwardrobe.admin.view: true
+      rayzwardrobe.use.page.*: true
+      rayzwardrobe.use.slot.*: true
+  rayzwardrobe.use.page.*:
+    description: Allows access to every wardrobe page
+    default: false
+  rayzwardrobe.page.*:
+    description: Alias allowing access to every wardrobe page
+    default: false
+  rayzwardrobe.use.slot.*:
+    description: Allows access to every restricted wardrobe slot
+    default: false
+  rayzwardrobe.slot.*:
+    description: Alias allowing access to every restricted wardrobe slot
+    default: false
+  rayzwardrobe.use.page2:
+    description: Allows access to wardrobe page 2
+    default: false
+  rayzwardrobe.use.page3:
+    description: Allows access to wardrobe page 3
+    default: false
+  rayzwardrobe.use.page4:
+    description: Allows access to wardrobe page 4
+    default: false
+  rayzwardrobe.use.page5:
+    description: Allows access to wardrobe page 5
+    default: false
+  rayzwardrobe.use.page6:
+    description: Allows access to wardrobe page 6
+    default: false
+  rayzwardrobe.use.page7:
+    description: Allows access to wardrobe page 7
+    default: false
+  rayzwardrobe.use.page8:
+    description: Allows access to wardrobe page 8
+    default: false
+  rayzwardrobe.use.page.2:
+    description: Allows access to wardrobe page 2
+    default: false
+  rayzwardrobe.use.page.3:
+    description: Allows access to wardrobe page 3
+    default: false
+  rayzwardrobe.use.page.4:
+    description: Allows access to wardrobe page 4
+    default: false
+  rayzwardrobe.use.page.5:
+    description: Allows access to wardrobe page 5
+    default: false
+  rayzwardrobe.use.page.6:
+    description: Allows access to wardrobe page 6
+    default: false
+  rayzwardrobe.use.page.7:
+    description: Allows access to wardrobe page 7
+    default: false
+  rayzwardrobe.use.page.8:
+    description: Allows access to wardrobe page 8
+    default: false
+  rayzwardrobe.page2:
+    description: Alias allowing access to wardrobe page 2
+    default: false
+  rayzwardrobe.page3:
+    description: Alias allowing access to wardrobe page 3
+    default: false
+  rayzwardrobe.page4:
+    description: Alias allowing access to wardrobe page 4
+    default: false
+  rayzwardrobe.page5:
+    description: Alias allowing access to wardrobe page 5
+    default: false
+  rayzwardrobe.page6:
+    description: Alias allowing access to wardrobe page 6
+    default: false
+  rayzwardrobe.page7:
+    description: Alias allowing access to wardrobe page 7
+    default: false
+  rayzwardrobe.page8:
+    description: Alias allowing access to wardrobe page 8
+    default: false
+  rayzwardrobe.page.2:
+    description: Alias allowing access to wardrobe page 2
+    default: false
+  rayzwardrobe.page.3:
+    description: Alias allowing access to wardrobe page 3
+    default: false
+  rayzwardrobe.page.4:
+    description: Alias allowing access to wardrobe page 4
+    default: false
+  rayzwardrobe.page.5:
+    description: Alias allowing access to wardrobe page 5
+    default: false
+  rayzwardrobe.page.6:
+    description: Alias allowing access to wardrobe page 6
+    default: false
+  rayzwardrobe.page.7:
+    description: Alias allowing access to wardrobe page 7
+    default: false
+  rayzwardrobe.page.8:
+    description: Alias allowing access to wardrobe page 8
+    default: false
+  rayzwardrobe.use.slot1:
+    description: Allows access to restricted wardrobe slot 1
+    default: false
+  rayzwardrobe.use.slot2:
+    description: Allows access to restricted wardrobe slot 2
+    default: false
+  rayzwardrobe.use.slot3:
+    description: Allows access to restricted wardrobe slot 3
+    default: false
+  rayzwardrobe.use.slot4:
+    description: Allows access to restricted wardrobe slot 4
+    default: false
+  rayzwardrobe.use.slot5:
+    description: Allows access to restricted wardrobe slot 5
+    default: false
+  rayzwardrobe.use.slot6:
+    description: Allows access to restricted wardrobe slot 6
+    default: false
+  rayzwardrobe.use.slot7:
+    description: Allows access to restricted wardrobe slot 7
+    default: false
+  rayzwardrobe.use.slot.1:
+    description: Allows access to restricted wardrobe slot 1
+    default: false
+  rayzwardrobe.use.slot.2:
+    description: Allows access to restricted wardrobe slot 2
+    default: false
+  rayzwardrobe.use.slot.3:
+    description: Allows access to restricted wardrobe slot 3
+    default: false
+  rayzwardrobe.use.slot.4:
+    description: Allows access to restricted wardrobe slot 4
+    default: false
+  rayzwardrobe.use.slot.5:
+    description: Allows access to restricted wardrobe slot 5
+    default: false
+  rayzwardrobe.use.slot.6:
+    description: Allows access to restricted wardrobe slot 6
+    default: false
+  rayzwardrobe.use.slot.7:
+    description: Allows access to restricted wardrobe slot 7
+    default: false
+  rayzwardrobe.slot1:
+    description: Alias allowing access to restricted wardrobe slot 1
+    default: false
+  rayzwardrobe.slot2:
+    description: Alias allowing access to restricted wardrobe slot 2
+    default: false
+  rayzwardrobe.slot3:
+    description: Alias allowing access to restricted wardrobe slot 3
+    default: false
+  rayzwardrobe.slot4:
+    description: Alias allowing access to restricted wardrobe slot 4
+    default: false
+  rayzwardrobe.slot5:
+    description: Alias allowing access to restricted wardrobe slot 5
+    default: false
+  rayzwardrobe.slot6:
+    description: Alias allowing access to restricted wardrobe slot 6
+    default: false
+  rayzwardrobe.slot7:
+    description: Alias allowing access to restricted wardrobe slot 7
+    default: false
+  rayzwardrobe.slot.1:
+    description: Alias allowing access to restricted wardrobe slot 1
+    default: false
+  rayzwardrobe.slot.2:
+    description: Alias allowing access to restricted wardrobe slot 2
+    default: false
+  rayzwardrobe.slot.3:
+    description: Alias allowing access to restricted wardrobe slot 3
+    default: false
+  rayzwardrobe.slot.4:
+    description: Alias allowing access to restricted wardrobe slot 4
+    default: false
+  rayzwardrobe.slot.5:
+    description: Alias allowing access to restricted wardrobe slot 5
+    default: false
+  rayzwardrobe.slot.6:
+    description: Alias allowing access to restricted wardrobe slot 6
+    default: false
+  rayzwardrobe.slot.7:
+    description: Alias allowing access to restricted wardrobe slot 7
+    default: false

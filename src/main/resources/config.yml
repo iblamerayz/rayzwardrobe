@@ -1,0 +1,139 @@
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                                                                     ┃
+# ┃                         ⚡ RAYZ WARDROBE ⚡                         ┃
+# ┃                                                                     ┃
+# ┃                   Premium Armour Wardrobe Management                ┃
+# ┃                          Created by Rayz                            ┃
+# ┃                                                                     ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# ⚙️ CORE SETTINGS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+settings:
+  cooldown-seconds: 3
+  max-armor-sets: 56
+  enable-animations: true
+  max-name-length: 20
+  min-name-length: 3
+  # When false, all players with rayzwardrobe.use can open every page.
+  # When true, page 2+ require rayzwardrobe.use.page<number>, rayzwardrobe.use.page.<number>, or rayzwardrobe.page.<number>.
+  page-permissions-enabled: false
+  # When false, all wardrobe columns are usable.
+  # When true, each slot requires a slot permission such as rayzwardrobe.use.slot.1.
+  slot-permissions-enabled: false
+  # column = slot 1-7 repeats on every page.
+  # global = every wardrobe slot has its own number, such as slot 1-56.
+  # both = either matching permission works.
+  slot-permission-scope: "column"
+
+# Optional tool storage.
+# When enabled, each wardrobe armor set can also store up to 2 tools:
+# the player's main-hand item and off-hand item at save/equip time.
+# Players should hold the tools they want stored while saving the wardrobe set.
+# This is still a wardrobe swap, not a kit or hotbar system.
+tools:
+  enabled: false
+  max-per-armor-set: 2
+  show-tools-in-lore: true
+  empty-slot-icon: "ITEM_FRAME"
+  allowed-materials:
+    - "*_SWORD"
+    - "*_AXE"
+    - "*_PICKAXE"
+    - "*_SHOVEL"
+    - "*_HOE"
+    - "BOW"
+    - "CROSSBOW"
+    - "TRIDENT"
+    - "MACE"
+    - "SHIELD"
+  # Accepts custom item ids such as ItemsAdder:namespace:id, Oraxen:id, Nexo:id, or wildcards.
+  allowed-custom-items: []
+  # Optional persistent-data matchers for custom item plugins not directly hooked.
+  # Format: "namespace:key" or "namespace:key=value"; wildcards are supported.
+  # Example Oraxen matcher: "oraxen:id=*"
+  allowed-persistent-data: []
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# ✨ VISUAL EFFECTS (PARTICLES)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+particles:
+  equip-effect: "END_ROD"
+  equip-secondary-effect: "CRIT"
+  select-effect: "END_ROD"
+  apply-effect: "SPELL_WITCH"
+
+  # Particle Density & Spread
+  count: 25
+  equip-steps: 12
+  equip-particles-per-step: 2
+  equip-interval-ticks: 2
+  equip-radius: 0.65
+  select-count: 10
+  apply-ring-points: 14
+  apply-radius: 0.75
+  offset-x: 0.3
+  offset-y: 0.5
+  offset-z: 0.3
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🎵 SOUND EFFECTS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+sounds:
+  enabled: true
+  volume: 0.8
+  pitch: 1.0
+
+  # Sound Triggers
+  open: "BLOCK_CHEST_OPEN"
+  save: "ENTITY_PLAYER_LEVELUP"
+  equip: "ITEM_ARMOR_EQUIP_NETHERITE"
+  click: "ENTITY_EXPERIENCE_ORB_PICKUP"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🎨 THEMES & GUI
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+themes-gui:
+  enable-animations: true
+  update-interval: 6
+
+  border-rainbow-colors:
+    - "RED_STAINED_GLASS_PANE"
+    - "ORANGE_STAINED_GLASS_PANE"
+    - "YELLOW_STAINED_GLASS_PANE"
+    - "LIME_STAINED_GLASS_PANE"
+    - "LIGHT_BLUE_STAINED_GLASS_PANE"
+    - "PURPLE_STAINED_GLASS_PANE"
+    - "PINK_STAINED_GLASS_PANE"
+
+  background-color-1: "LIGHT_GRAY_STAINED_GLASS_PANE"
+  background-color-2: "WHITE_STAINED_GLASS_PANE"
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🔌 PLACEHOLDERAPI
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+placeholderapi:
+  enabled: true
+  # Identifier: %rayzwardrobe_<placeholder>%
+  # Available placeholders:
+  # - version, storage_type, max_sets, max_pages, theme_count, placeholder_count
+  # - tools_enabled, max_tools_per_set
+  # - total_sets, used_slots, empty_slots, current_page
+  # - selected_theme, selected_theme_key, renaming, cooldown, cooldown_remaining
+  # - can_use, can_themes
+  # - slot_<number>_name, slot_<number>_exists, slot_<number>_permission, slot_<number>_access
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 💾 DATABASE (MYSQL)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+mysql:
+  enabled: false
+  host: "localhost"
+  port: 3306
+  database: "minecraft"
+  username: "root"
+  password: ""
+  useSSL: false
+  connection-timeout-seconds: 10

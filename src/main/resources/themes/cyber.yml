@@ -1,0 +1,14 @@
+theme-name: "Cyber"
+slot: 11
+permission: ""
+# PLAYER HEAD AS ICON:
+# icon: PLAYER_HEAD
+#  head-owner: "%player_name%"   # or a specific name like "Notch"
+# minecraft-heads.com
+#  head-texture: "eeauhdwaushdwasd...." # optional custom texture
+icon: ENDER_EYE
+background: BLACK_STAINED_GLASS_PANE
+primary-color: LIME_STAINED_GLASS_PANE
+secondary-color: CYAN_STAINED_GLASS_PANE
+empty-slot-icon: LIGHT_BLUE_STAINED_GLASS_PANE
+locked-icon: REDSTONE_BLOCK

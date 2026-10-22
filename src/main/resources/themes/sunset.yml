@@ -1,0 +1,14 @@
+theme-name: "Sunset"
+slot: 23
+permission: ""
+# PLAYER HEAD AS ICON:
+# icon: PLAYER_HEAD
+#  head-owner: "%player_name%"   # or a specific name like "Notch"
+# minecraft-heads.com
+#  head-texture: "eeauhdwaushdwasd...." # optional custom texture
+icon: RED_BED
+background: ORANGE_STAINED_GLASS_PANE
+primary-color: RED_STAINED_GLASS_PANE
+secondary-color: PINK_STAINED_GLASS_PANE
+empty-slot-icon: YELLOW_STAINED_GLASS_PANE
+locked-icon: BARRIER

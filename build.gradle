@@ -1,0 +1,81 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+
+
+group = 'org.rayz'
+version = '3.1'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "papermc-repo"
+        url = "https://repo.papermc.io/repository/maven-public/"
+    }
+    maven {
+        name = "codemc-repo"
+        url = "https://repo.codemc.io/repository/maven-public/"
+    }
+    maven {
+        name = "jitpack"
+        url = "https://jitpack.io"
+    }
+    maven {
+        name = "placeholderapi-repo"
+        url = "https://repo.helpch.at/releases/"
+    }
+}
+
+dependencies {
+    // Paper API
+    compileOnly("io.papermc.paper:paper-api:26.1.2.build.63-stable")
+    compileOnly files('libs/authlib-1.5.25.jar')
+
+    // Optional PlaceholderAPI expansion support
+    compileOnly("me.clip:placeholderapi:2.12.2")
+
+    // bStats is bundled directly into the plugin jar so Metrics is available at runtime.
+    compileOnly files('lib/bstats-base-3.1.0.jar', 'lib/bstats-bukkit-3.1.0.jar')
+
+    // Custom item integrations are reflection based so the plugin can run without those APIs installed.
+}
+
+def apiJavaVersion = 25
+def targetJavaVersion = 21
+java {
+    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
+    sourceCompatibility = javaVersion
+    targetCompatibility = javaVersion
+    toolchain.languageVersion = JavaLanguageVersion.of(apiJavaVersion)
+}
+
+configurations.configureEach {
+    attributes.attribute(TargetJvmVersion.TARGET_JVM_VERSION_ATTRIBUTE, apiJavaVersion)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+
+    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
+        options.release.set(targetJavaVersion)
+    }
+}
+
+processResources {
+    def props = [version: version]
+    inputs.properties props
+    filteringCharset 'UTF-8'
+
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}
+
+tasks.named('jar') {
+    from(files('lib/bstats-base-3.1.0.jar', 'lib/bstats-bukkit-3.1.0.jar').collect { zipTree(it) }) {
+        include 'org/bstats/**'
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

@@ -1,0 +1,124 @@
+# RayzWardrobe GUI
+# All materials are optional. If a value is missing or invalid, the plugin falls back safely.
+
+inventory:
+  # Must be a multiple of 9.
+  size: 54
+
+  # Number of wardrobe columns shown per page.
+  sets-per-page: 7
+
+  items:
+    background:
+      use-theme: true
+      material: "BLACK_STAINED_GLASS_PANE"
+
+    previous-page:
+      slot: 45
+      material: "ARROW"
+      disabled-material: "BARRIER"
+
+    next-page:
+      slot: 53
+      material: "ARROW"
+      disabled-material: "BARRIER"
+
+    page-info:
+      slot: 0
+      material: "BOOK"
+
+    themes-button:
+      slot: 8
+      material: "NETHER_STAR"
+
+    admin-back-button:
+      slot: 8
+      material: "ARROW"
+
+    nameplate:
+      material: "NAME_TAG"
+      empty-material: "LIGHT_GRAY_STAINED_GLASS_PANE"
+      locked-material: "BARRIER"
+
+    armor:
+      empty-material: "GRAY_STAINED_GLASS_PANE"
+      empty-preview-material: "LIGHT_GRAY_STAINED_GLASS_PANE"
+      locked-material: "BARRIER"
+
+    tool:
+      empty-material: "ITEM_FRAME"
+
+    actions:
+      save-material: "WRITABLE_BOOK"
+      save-tools-material: "CHEST"
+      equip-material: "LIME_DYE"
+      inspect-material: "ENDER_EYE"
+      empty-material: "GRAY_STAINED_GLASS_PANE"
+      locked-material: "BARRIER"
+
+  # Define the exact slots for each wardrobe set.
+  # Optional tool-1/tool-2 slots can be enabled by setting them to valid GUI slots.
+  set-layout:
+    1:
+      nameplate: 1
+      helmet: 10
+      chestplate: 19
+      leggings: 28
+      boots: 37
+      action: 46
+      tool-1: -1
+      tool-2: -1
+    2:
+      nameplate: 2
+      helmet: 11
+      chestplate: 20
+      leggings: 29
+      boots: 38
+      action: 47
+      tool-1: -1
+      tool-2: -1
+    3:
+      nameplate: 3
+      helmet: 12
+      chestplate: 21
+      leggings: 30
+      boots: 39
+      action: 48
+      tool-1: -1
+      tool-2: -1
+    4:
+      nameplate: 4
+      helmet: 13
+      chestplate: 22
+      leggings: 31
+      boots: 40
+      action: 49
+      tool-1: -1
+      tool-2: -1
+    5:
+      nameplate: 5
+      helmet: 14
+      chestplate: 23
+      leggings: 32
+      boots: 41
+      action: 50
+      tool-1: -1
+      tool-2: -1
+    6:
+      nameplate: 6
+      helmet: 15
+      chestplate: 24
+      leggings: 33
+      boots: 42
+      action: 51
+      tool-1: -1
+      tool-2: -1
+    7:
+      nameplate: 7
+      helmet: 16
+      chestplate: 25
+      leggings: 34
+      boots: 43
+      action: 52
+      tool-1: -1
+      tool-2: -1
